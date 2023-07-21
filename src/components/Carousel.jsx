@@ -27,6 +27,7 @@ export default function Carroussel(props) {
         offsetRadius={offsetRadius}
         showNavigation={showArrows}
         animationConfig={config.gentle}
+        goToSlideDelay = "500"
       />
     </div>
   );

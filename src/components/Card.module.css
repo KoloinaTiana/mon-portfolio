@@ -1,5 +1,4 @@
-/* Card.module.css */
-
+/* Style de base */
 .card {
   display: flex;
   flex-direction: column;
@@ -10,7 +9,7 @@
   padding: 0 2rem 2rem 2rem;
   border-radius: 10px;
 }
-  
+
 .card h2 {
   margin: 0;
   margin-top: 1rem;
@@ -24,4 +23,15 @@
   height: 10rem;
   object-fit: cover;
   border-radius: 10px;
+}
+
+/* Ajouter des media queries pour la responsivité */
+@media screen and (max-width: 700px) {
+  .card {
+    width: 12rem;
+  }
+  
+  .card img {
+    height: 8rem;
+  }
 }

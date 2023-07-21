@@ -5,22 +5,6 @@ import React, { useState, useEffect } from "react";
 export default function CarouselEx() {
 
   const [avatarSize, setAvatarSize] = useState("xxl");
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 830); // You can adjust the breakpoint here
-    };
-
-    handleResize(); // Call once on initial load
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const carouselHeight = isSmallScreen ? "80vh" : "100vh";
 
   // Utilisez useEffect pour détecter la taille de l'écran lors du chargement de la page
   useEffect(() => {
@@ -47,7 +31,7 @@ export default function CarouselEx() {
   return ( 
     <section id="experience">
       <Carousel style={{
-            height: carouselHeight,
+            height: '100vh',
             width: '100%',
       }} className="shadow-xl" autoplay={true} loop={true} autoplayDelay="15000">
         <div className="h-full w-full">

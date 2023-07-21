@@ -8,37 +8,37 @@ export default function Competence() {
         {
           key: uuidv4(),
           content: (
-            <Card imagen="./images/js.png" title="Javascript"/>
+            <Card imagen="https://koloinatiana.github.io/mon-portfolio/images/js.png" title="Javascript"/>
           )
         },
         {
           key: uuidv4(),
           content: (
-            <Card imagen="./images/nodejs.jpg" title="NodeJS" />
+            <Card imagen="https://koloinatiana.github.io/mon-portfolio/images/nodejs.jpg" title="NodeJS" />
           )
         },
         {
           key: uuidv4(),
           content: (
-            <Card imagen="./images/java.jpg" title="Java" />
+            <Card imagen="https://koloinatiana.github.io/mon-portfolio/images/java.jpg" title="Java" />
           )
         },
         {
           key: uuidv4(),
           content: (
-            <Card imagen="./images/mysql.jpg" title="MySQL"  />
+            <Card imagen="https://koloinatiana.github.io/mon-portfolio/images/mysql.jpg" title="MySQL"  />
           )
         },
         {
           key: uuidv4(),
           content: (
-            <Card imagen="./images/php.jpg" title="PHP"  />
+            <Card imagen="https://koloinatiana.github.io/mon-portfolio/images/php.jpg" title="PHP"  />
           )
         },
         {
           key: uuidv4(),
           content: (
-            <Card imagen="./images/react.jpg" title="ReactJS"  />
+            <Card imagen="https://koloinatiana.github.io/mon-portfolio/images/react.jpg" title="ReactJS"  />
           )
         }
       ];

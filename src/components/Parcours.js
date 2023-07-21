@@ -2,10 +2,17 @@ import { Timeline, TimelineItem, TimelineConnector, TimelineHeader, TimelineIcon
 import { ArrowsUpDownIcon } from "@heroicons/react/24/outline";
 
 export default function Parcours() {
+
   return (
-    <section id="parcours" className="flex top-5" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", maxWidth: "60vw", margin: "0 auto", marginTop: "80px", marginBottom: "80px"}}>
-      <Typography variant="h4"className="uppercase mb-4 text-[#B284A3]">Parcours</Typography>
-      <div className="w-[32rem]">
+    <section
+      id="parcours"
+      className="flex flex-col md:flex-row items-center justify-center mt-10"
+      style={{justifyContent: "space-between", maxWidth: "60vw", margin: "0 auto", marginTop: "80px", marginBottom: "80px"}}
+    >
+      <Typography variant="h4" className="uppercase mb-4 text-[#B284A3]">
+        Parcours
+      </Typography>
+      <div className="w-full sm:w-[90%] md:w-[80%] max-w-[32rem]">
         <Timeline>
           <TimelineItem>
             <TimelineConnector />

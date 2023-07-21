@@ -1,11 +1,29 @@
 import { Carousel, Typography } from "@material-tailwind/react";
 import { TypeAnimation } from 'react-type-animation';
+import React, { useState, useEffect } from "react";
  
 export default function CarouselP() {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 830); // You can adjust the breakpoint here
+    };
+
+    handleResize(); // Call once on initial load
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const carouselHeight = isSmallScreen ? "50vh" : "100vh";
+
   return (
     <Carousel
         style={{
-            height: '100vh',
+            height: carouselHeight,
             width: '100%',
         }} className="shadow-xl"
         autoplay={true}
@@ -27,7 +45,7 @@ export default function CarouselP() {
     >
       <div className="relative h-full w-full">
         <img
-          src="./images/ordi.png"
+          src="https://koloinatiana.github.io/mon-portfolio/images/ordi.png"
           alt="image 1"
           className="h-full w-full object-cover"
         />
@@ -36,7 +54,7 @@ export default function CarouselP() {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-3xl sm:text-lg md:text-4xl lg:text-5xl"
             >
              <TypeAnimation
                 sequence={[
@@ -59,7 +77,7 @@ export default function CarouselP() {
 
       <div className="relative h-full w-full">
         <img
-          src="./images/asa.png"
+          src="https://koloinatiana.github.io/mon-portfolio/images/asa.png"
           alt="image 1"
           className="h-full w-full object-cover"
         />
@@ -68,7 +86,7 @@ export default function CarouselP() {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-3xl sm:text-lg md:text-4xl lg:text-5xl"
             >
              <p style={{ fontSize: '2em'}}>I have a</p>
              <TypeAnimation
@@ -93,7 +111,7 @@ export default function CarouselP() {
 
       <div className="relative h-full w-full">
         <img
-          src="./images/code.jpg"
+          src="https://koloinatiana.github.io/mon-portfolio/images/code.jpg"
           alt="image 3"
           className="h-full w-full object-cover"
         />
@@ -102,7 +120,7 @@ export default function CarouselP() {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-3xl sm:text-lg md:text-4xl lg:text-5xl"
             >
              <p style={{ fontSize: '2em'}}>Je suis</p>
              <TypeAnimation

@@ -78,12 +78,14 @@ export default function Navbar() {
             <a href="#competence" className="mr-5 hover:text-white">
               Compétences
             </a>
-            <a href="#projet" className="mr-5 hover:text-white">
+            
+            {/* <a href="#projet" className="mr-5 hover:text-white">
               Projets
             </a>
             <a href="#interet" className="mr-5 hover:text-white">
               Centres d'intérêts
-            </a>
+            </a> */}
+            
           </nav>
         )}
         <a
